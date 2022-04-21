@@ -2,19 +2,19 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Loader from '../components/Loader'
+import toast from 'react-hot-toast'
 
 export default function Home() {
   return (
     <div>
-      <Link 
-        prefetch={false} 
-        href={{
-          pathname: '/[username]',
-          query: { username: 'jeff6969' }
-        }}
+      <button
+        onClick={() => toast('Good Job!', {
+          icon: '👏',
+        })}
       >
-        <a>Jeff{`&apos`}s Profile</a>
-      </Link>
+        Toast Me
+      </button>
     </div>
   )
 }
